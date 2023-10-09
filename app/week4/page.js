@@ -1,9 +1,10 @@
 
+import NewItem from './new-item';
 
 export default function Page(){
- return(
-    <main>
-        
-    </main>
- );
+return(
+   <main>
+   <NewItem />;
+   </main>
+);
 }
