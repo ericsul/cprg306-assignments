@@ -9,6 +9,7 @@ export default function Home() {
       <StudentInfo/>
       <p><Link href="/week2">week2</Link></p>
       <Link href="/week3">week 3</Link>
+      <Link href="/week4">week 4</Link>
     </main>
   )
 }
