@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemList from './item-list';
-import { useClient } from 'react';
+
 
 
 function Page() {
