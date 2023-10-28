@@ -1,15 +1,9 @@
-import React from 'react';
-import { useClient } from 'react';
-
-function Item({ name, quantity, category }) {
-return (
-    <div className="border p-2 mb-2">
-    {name}
-    <br />
-    Buy {quantity} in {category}
-    </div>
-);
+export default function Item({ name, quantity, category }) {
+    return (
+        <h2 className="text-2xl border border-red-300  bg-purple-300 font-bold text-blue-400 w-full max-w-xs m-4 p-2">
+            {[name, quantity, category]}
+        </h2>
+    );
 }
 
-export default Item;
 
