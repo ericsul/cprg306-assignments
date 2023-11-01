@@ -1,14 +1,17 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import ItemList from "./item-list";
 import NewItem from "./new-item";
 import MealIdeas from "./meal-ideas";
 import itemsData from "./items.json";
-import { useClient } from "next/data-client";
+
 
 const Page = () => {
-  const [items, setItems] = useClient(itemsData);
-  const [selectedItemName, setSelectedItemName] = useClient("");
+  const [items, setItems] = useState(itemsData);
+  const [selectedItemName, setSelectedItemName] = useState("");
+
 
   const handleAddItem = (newItem) => {
     setItems([...items, newItem]);
@@ -18,6 +21,10 @@ const Page = () => {
     const cleanedItemName = itemName.split(",")[0].trim();
     setSelectedItemName(cleanedItemName);
   };
+
+  const handldeIngredientSelect = (ingredient) => {
+    
+  }
 
   return (
     <div className="flex">

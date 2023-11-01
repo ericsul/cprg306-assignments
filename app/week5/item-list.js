@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Item from "./item";
-import itemsData from "./items.json";
+import itemsData from "./item.json";
 
 function ItemList({ name, quantity, category }) {
   const [sortBy, setSortBy] = useState("name");
