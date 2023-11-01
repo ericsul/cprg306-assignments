@@ -18,20 +18,24 @@ const fetchMealIdeas = async (ingredient) => {
 const MealIdeas = ({ ingredient }) => {
   const [meals, setMeals] = useState([]);
 
-  const loadMealIdeas = useCallback(async () => {
-    const mealIdeas = await fetchMealIdeas(ingredient);
-    setMeals(mealIdeas);
-  }, [ingredient]);
+  // const loadMealIdeas = useCallback(async () => {
+  //   const mealIdeas = await fetchMealIdeas(ingredient);
+  //   setMeals(mealIdeas);
+  // }, [ingredient]);
 
   useEffect(() => {
+    const loadMealIdeas = async () => {
+      const mealIdeas = await fetchMealIdeas(ingredient);
+      setMeals(mealIdeas);
+    };
     loadMealIdeas();
-  }, [ingredient, loadMealIdeas]);
+  }, [ingredient]);
 
   return (
     <div>
       <h2>Meal Ideas with {ingredient}</h2>
       <ul>
-        {meals.map((meal) => (
+        {meals && meals.map((meal) => (
           <li key={meal.idMeal}>
             {meal.strMeal}
           </li>

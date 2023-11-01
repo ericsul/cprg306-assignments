@@ -6,7 +6,7 @@ import Item from "./item";
 import itemsData from "./items.json";
 import NewItem from "./new-item";
 
-export default function ItemList({ name, quantity, category }) {
+export default function ItemList({ name, quantity, category, onIngredientSelect }) {
   const [sortBy, setSortBy] = useState("name");
   const [sortCategory, setSortCategory] = useState("category"); // Add a separate state for category sorting
   const sortedItems = [...itemsData];
@@ -49,6 +49,7 @@ export default function ItemList({ name, quantity, category }) {
           name={item.name}
           quantity={item.quantity}
           category={item.category}
+          onIngredientSelect={onIngredientSelect}
         />
       ))}
       </>
