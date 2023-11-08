@@ -3,8 +3,8 @@ import StudentInfo from './StudentInfo'
 import Link from 'next/link';
 
 export default function Home() {
-  const weekDemos = [2,3,4,5,6,7];
-  const doneUpTo = 7;
+  const weekDemos = [2,3,4,5,6,7,8];
+  const doneUpTo = 8;
 
   return (
     <main className="flex min-h-screen flex-col justify-between p-40">
